@@ -1,68 +1,114 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
 <!doctype html>
-<html lang="en">
+<html
+    lang="en"
+    style="
+    background-color: #dce1df;
+    height: 100vh;
+    width: 100vw;
+    min-width: 1000px;
+    margin: 0;
+    color: #36213e;
+    font-family: Garamond;
+  "
+>
     <head>
         <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     </head>
-    <body>
-        <Header />
-        <main>
-            <h1>🧑‍🚀 Hello, Astronaut!</h1>
-            <p>
-                Welcome to the official <a href="https://astro.build/">Astro</a>
-                blog starter template. This template serves as a lightweight, minimally-styled
-                starting point for anyone looking to build a personal website, blog,
-                or portfolio with Astro.
-            </p>
-            <p>
-                This template comes with a few integrations already configured
-                in your
-                <code>astro.config.mjs</code> file. You can customize your setup
-                with
-                <a href="https://astro.build/integrations">Astro Integrations</a
-                > to add tools like Tailwind, React, or Vue to your project.
-            </p>
-            <p>Here are a few ideas on how to get started with the template:</p>
-            <ul>
-                <li>Edit this page in <code>src/pages/index.astro</code></li>
-                <li>
-                    Edit the site header items in <code
-                        >src/components/Header.astro</code>
-                </li>
-                <li>
-                    Add your name to the footer in <code
-                        >src/components/Footer.astro</code>
-                </li>
-                <li>
-                    Check out the included blog posts in <code
-                        >src/content/blog/</code>
-                </li>
-                <li>
-                    Customize the blog post page layout in <code
-                        >src/layouts/BlogPost.astro</code>
-                </li>
-            </ul>
-            <p>
-                Have fun! If you get stuck, remember to
-                <a href="https://docs.astro.build/">read the docs</a>
-                or <a href="https://astro.build/chat">join us on Discord</a> to ask
-                questions.
-            </p>
-            <p>
-                Looking for a blog template with a bit more personality? Check
-                out
-                <a href="https://github.com/Charca/astro-blog-template"
-                    >astro-blog-template</a
+    <body
+        style="
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      padding-left: 6rem;
+      padding-right: 6rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      box-sizing: border-box;
+    "
+    >
+        <header
+            style="
+        display: flex;
+        flex: 3;
+        border-bottom: solid 2px #85839d;
+      "
+        >
+            <div
+                style="
+          display: flex;
+          flex: 1;
+          justify-content: center;
+          flex-direction:column;
+        "
+            >
+                <h1 style="font-size: 5rem; font-family: Garamond;">Braedon</h1>
+                <h1
+                    style="font-size: 5rem; font-family: Garamond; margin-left: 10rem"
                 >
-                by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-            </p>
+                    Watkins
+                </h1>
+            </div>
+            <div style="display: flex; justify-content: right; flex: 3">
+                <img
+                    src="../../src/assets/saleh.png"
+                    alt="Dithered artwork of a mage running to the left,
+        possibly casting a spell; FE8 playable character Saleh"
+                    style="
+            object-fit: cover;
+            height: 20rem;
+            max-height: 100%;
+            width: 50rem;
+          "
+                />
+            </div>
+        </header>
+        <nav style="display: flex; gap: 2rem; font-size: 1.25rem">
+            <a href="/now" style="text-decoration: underline; color: #36213e"
+                >Now</a
+            >
+            <a href="/about" style="text-decoration: underline; color: #36213e"
+                >About</a
+            >
+            <a
+                href="https://braedonwatkins.bearblog.dev/blog/"
+                target="_blank"
+                style="text-decoration: underline; color: #36213e">Blog</a
+            >
+            <!-- TODO: get shrines into a showoffable spot -->
+            <!-- <a href="/shrines" style="text-decoration: underline; color: #36213e" -->
+            <!--   >Shrines</a -->
+            <!-- > -->
+            <!-- TODO: make resume section && portfolio TBH-->
+            <!-- <a href="https://braedonwatkins.github.io/resume/"> Resume (Old) </a> -->
+        </nav>
+
+        <main
+            style="
+        flex: 4;
+        padding-left: 16rem;
+        padding-right: 16rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      "
+        >
         </main>
-        <Footer />
+
+        <footer style="display: flex; flex: 1; flex-direction: row; gap: 1rem">
+            <a href="https://github.com/braedonwatkins" target="_blank"
+                >GitHub</a
+            >
+            <a href="https://linkedin.com/in/braedonwatkins" target="_blank"
+                >LinkedIn</a
+            >
+            <!-- TODO: it would be nice if this just copied to clipboard, let the user know, and then if they click again soon (debounce?) then it opens a client -->
+            <a href="mailto:watkins.braedon@gmail.com">Email</a>
+        </footer>
     </body>
 </html>
