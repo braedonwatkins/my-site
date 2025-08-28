@@ -1,12 +1,82 @@
 ---
-import BlogLayout from "../layouts/BlogPost.astro";
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
-<BlogLayout
-    title="About Me"
-    description="Lorem ipsum dolor sit amet"
-    pubDate={new Date("August 08 2021")}
->
-    <!-- TODO: fill with old content -->
-    <p></p>
-</BlogLayout>
+<html>
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+        <title>Braedon Watkins</title>
+    </head>
+
+    <h1>About This Site</h1>
+    <p>
+        This site was built with <span
+            style="text-decoration: line-through; margin-right: 0.25rem"
+        >
+            11ty
+        </span>
+        Astro!
+    </p>
+    <p>
+        My goal here is to create a place where I can shout into the void for
+        personal and professional audiences
+    </p>
+    <p>
+        My design choice for this site is a confusing blend between <a
+            href="https://motherfuckingwebsite.com/"
+            >This is a motherfucking website</a
+        > and some maximalist neocities wet dream.
+
+        <br />With that in mind I'm starting every page with pure HTML + CSS and
+        going from there!
+        <br />Some inspirations for the design so far are:
+        <ul>
+            <li>
+                <a href="https://cabbagesorter.neocities.org/">Cabbage Sorter</a
+                > for the aesthetics!
+            </li>
+            <li>
+                <a href="https://jamesbvaughan.com">James Vaughan</a> for the tight
+                control and keeping things minimal while not giving
+                <strong>only</strong> HTML and CSS.
+            </li>
+        </ul>
+    </p>
+    <h1>About Me</h1>
+    <p>Professionally I am a fullstack developer</p>
+    <p>
+        I started college very interested in Physics and Math.
+        <br />I faced a lot of financial stress during this time and I wasn't a
+        good student. I unfortunately had to drop out and try again with a new
+        degree, Computer Science.
+        <p>
+            I toyed with programs ever since I was little but I started writing
+            meaningful software in college around 2019. From there grew a love
+            of computer science.
+
+            <br />I graduated into a difficult market for new hires in 2023 but
+            managed to hold on to a local tech startup for nearly two years.
+
+            <br />I then took a crack at being a freelance contractor. I am
+            currently doing this and staying way too busy for my own good doing
+            it.
+
+            <br />I would like more excuses to do mathematical or scientific
+            work. If you have something like this for me please feel free to
+            reach out!
+        </p>
+        <p>
+            Some things I'd like to do if I had more free time:
+            <ul>
+                <li>Travel</li>
+                <li>Get Better at Guitar</li>
+                <li>Become a decent handyman</li>
+                <li>Mend and make clothes</li>
+                <li>Make electronics, get better at soldering</li>
+                <li>Make a game with WebGL</li>
+                <li>Fill out the rest of this list</li>
+            </ul>
+        </p>
+    </p>
+</html>
